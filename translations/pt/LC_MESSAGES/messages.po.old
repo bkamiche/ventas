@@ -1,0 +1,963 @@
+# Portuguese translations for PROJECT.
+# Copyright (C) 2025 ORGANIZATION
+# This file is distributed under the same license as the PROJECT project.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2025.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: PROJECT VERSION\n"
+"Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
+"POT-Creation-Date: 2025-11-04 16:13-0500\n"
+"PO-Revision-Date: 2025-11-04 16:05-0500\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language: pt\n"
+"Language-Team: pt <LL@li.org>\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.17.0\n"
+
+#: auth.py:109 main.py:259
+msgid "Debe estar conectado para ver este enlace."
+msgstr "Você precisa estar conectado para visualizar este link."
+
+#: main.py:322
+msgid "Credenciales inválidas o usuario inactivo"
+msgstr "Credenciais inválidas ou usuário inativo"
+
+#: main.py:349
+msgid "Recuperación de contraseña"
+msgstr "Recuperação de senha"
+
+#: main.py:352
+#, python-brace-format
+msgid ""
+"\n"
+"¡Hola!\n"
+"\n"
+"Parece que olvidaste tu contraseña. No te preocupes, ¡pasa a menudo!\n"
+"\n"
+"Para volver a acceder a tu cuenta, simplemente haz clic en el siguiente "
+"enlace:\n"
+"\n"
+"{enlace}\n"
+"\n"
+"Este enlace caducará en 1 hora. Si no solicitaste este cambio, no es "
+"necesario que hagas nada.\n"
+"\n"
+"Si tienes alguna pregunta, no dudes en contactarnos.\n"
+"\n"
+"Saludos,\n"
+"El equipo de soporte\n"
+msgstr ""
+"\n"
+"Olá!\n"
+"\n"
+"Parece que você esqueceu sua senha. Não se preocupe, isso acontece com "
+"frequência!\n"
+"\n"
+"Para acessar sua conta novamente, basta clicar no link abaixo:\n"
+"\n"
+"{enlace}\n"
+"\n"
+"Esse link expirará em 1 hora. Se você não solicitou essa alteração, não "
+"precisa fazer nada.\n"
+"\n"
+"Se tiver alguma dúvida, não hesite em entrar em contato conosco.\n"
+"\n"
+"Atenciosamente,\n"
+"A equipe de suporte\n"
+
+#: main.py:371
+msgid "Se ha enviado un enlace de recuperación a tu correo."
+msgstr "Um link de recuperação foi enviado para seu e-mail."
+
+#: main.py:373
+msgid "No se encontró una cuenta con ese correo."
+msgstr "Não foi encontrada nenhuma conta com esse endereço de e-mail."
+
+#: main.py:380 main.py:394
+msgid "El enlace de recuperación es inválido o ha expirado."
+msgstr "O link de recuperação é inválido ou expirou."
+
+#: main.py:398
+msgid "Las contraseñas no coinciden."
+msgstr "As senhas não correspondem."
+
+#: main.py:400
+msgid ""
+"La contraseña debe tener entre 8 y 16 caracteres, incluir letras "
+"mayúsculas, minúsculas, números y un símbolo."
+msgstr ""
+"A senha deve ter entre 8 e 16 caracteres, incluir letras maiúsculas, "
+"letras minúsculas, números e um símbolo."
+
+#: main.py:407
+msgid "Tu contraseña ha sido actualizada."
+msgstr "Sua senha foi atualizada."
+
+#: templates/404.html:7
+msgid "Página no encontrada"
+msgstr "Página não encontrada"
+
+#: templates/404.html:44
+msgid "¡Oops! Parece que la página que buscas no existe."
+msgstr "Parece que a página que você está procurando não existe."
+
+#: templates/404.html:45
+msgid "Volver al inicio"
+msgstr "Voltar ao topo"
+
+#: templates/about.html:2
+msgid "Quiénes Somos - StudioSync CRM"
+msgstr "Sobre nós - StudioSync CRM"
+
+#: templates/about.html:7
+msgid "Quiénes Somos"
+msgstr "Quem somos"
+
+#: templates/about.html:12
+msgid "Nuestra misión"
+msgstr "Nossa missão"
+
+#: templates/about.html:14
+msgid ""
+"En StudioSync creemos que la tecnología debe simplificar la gestión de "
+"estudios creativos."
+msgstr ""
+"No StudioSync, acreditamos que a tecnologia deve simplificar o "
+"gerenciamento de estúdios de criação."
+
+#: templates/about.html:15
+msgid ""
+"Nuestra misión es ofrecer una plataforma que permita a fotógrafos, "
+"productores y equipos creativos enfocarse en lo que mejor saben hacer: "
+"crear."
+msgstr ""
+"Nossa missão é fornecer uma plataforma que permita que fotógrafos, "
+"produtores e equipes de criação se concentrem no que fazem de melhor: "
+"criar."
+
+#: templates/about.html:20
+msgid "Nuestra visión"
+msgstr "Nossa visão"
+
+#: templates/about.html:22
+msgid ""
+"Queremos ser la solución integral más confiable para la gestión de "
+"proyectos creativos en todo el mundo."
+msgstr ""
+"Queremos ser a solução de ponta a ponta mais confiável para o "
+"gerenciamento de projetos criativos em todo o mundo."
+
+#: templates/about.html:23
+msgid ""
+"Innovamos constantemente para mejorar la colaboración, la organización y "
+"la eficiencia en la industria creativa."
+msgstr ""
+"Inovamos constantemente para melhorar a colaboração, a organização e a "
+"eficiência no setor criativo."
+
+#: templates/about.html:28
+msgid "Nuestra historia"
+msgstr "Nossa história"
+
+#: templates/about.html:30
+msgid ""
+"StudioSync nació de la experiencia directa de trabajar en proyectos "
+"fotográficos y audiovisuales, donde la coordinación y la administración "
+"solían ser un desafío."
+msgstr ""
+"O StudioSync nasceu da experiência direta de trabalhar em projetos "
+"fotográficos e audiovisuais, nos quais a coordenação e a administração "
+"costumavam ser um desafio."
+
+#: templates/about.html:31
+msgid ""
+"Transformamos esas dificultades en oportunidades para crear una "
+"herramienta pensada por y para creativos."
+msgstr ""
+"Transformamos essas dificuldades em oportunidades para criar uma "
+"ferramenta projetada por e para profissionais criativos."
+
+#: templates/about.html:36
+msgid "Nuestros valores"
+msgstr "Nossos valores"
+
+#: templates/about.html:39
+msgid "Transparencia y confianza en todo lo que hacemos."
+msgstr "Transparência e confiança em tudo o que fazemos."
+
+#: templates/about.html:40
+msgid "Compromiso con la innovación y la calidad."
+msgstr "Compromisso com a inovação e a qualidade."
+
+#: templates/about.html:41
+msgid "Respeto por la privacidad y la seguridad de nuestros usuarios."
+msgstr "Respeito à privacidade e à segurança de nossos usuários."
+
+#: templates/about.html:42
+msgid "Pasión por el mundo creativo y sus profesionales."
+msgstr "Paixão pelo mundo criativo e seus profissionais."
+
+#: templates/about.html:48
+msgid "¿Quieres saber más?"
+msgstr "Você quer saber mais?"
+
+#: templates/about.html:49
+msgid ""
+"Contáctanos y conversemos sobre cómo StudioSync puede ayudarte a "
+"potenciar tu estudio creativo."
+msgstr ""
+"Entre em contato conosco e vamos conversar sobre como o StudioSync pode "
+"ajudá-lo a impulsionar seu estúdio criativo."
+
+#: templates/about.html:57 templates/privacy.html:82 templates/tos.html:72
+#: templates/what-we-do.html:57
+msgid "2025 StudioSync CRM. Todos los derechos reservados."
+msgstr "2025 StudioSync CRM. Todos os direitos reservados."
+
+#: templates/about.html:59 templates/main.html:107 templates/privacy.html:84
+#: templates/tos.html:7 templates/tos.html:74 templates/what-we-do.html:59
+msgid "Términos de Servicio"
+msgstr "Termos de Serviço"
+
+#: templates/about.html:60 templates/main.html:106 templates/privacy.html:7
+#: templates/privacy.html:85 templates/tos.html:75 templates/what-we-do.html:60
+msgid "Política de Privacidad"
+msgstr "Política de privacidade"
+
+#: templates/base.html:26
+msgid "Dashboard"
+msgstr "Painel de controle"
+
+#: templates/base.html:27
+msgid "Clientes"
+msgstr "Clientes"
+
+#: templates/base.html:28
+msgid "Paquetes"
+msgstr "Pacotes"
+
+#: templates/base.html:29
+msgid "Sesiones"
+msgstr "Sessões"
+
+#: templates/base.html:30
+msgid "Pagos"
+msgstr "Pagamentos"
+
+#: templates/base.html:31
+msgid "Calendario"
+msgstr "Calendário"
+
+#: templates/base.html:32
+msgid "Cumpleaños"
+msgstr "Aniversário"
+
+#: templates/base.html:33
+msgid "Compras"
+msgstr "Compras"
+
+#: templates/base.html:34
+msgid "Inventario"
+msgstr "Inventário"
+
+#: templates/base.html:35
+msgid "Plantillas"
+msgstr "Modelos"
+
+#: templates/base.html:36
+msgid "Whatsapp"
+msgstr "Whatsapp"
+
+#: templates/base.html:37
+msgid "Logout"
+msgstr "Sair"
+
+#: templates/login.html:5
+msgid "StudioSync CRM - Iniciar Sesión"
+msgstr "StudioSync CRM - Login"
+
+#: templates/login.html:139
+msgid "Usuario"
+msgstr "Usuário"
+
+#: templates/login.html:143
+msgid "Contraseña"
+msgstr "Senha"
+
+#: templates/login.html:145 templates/main.html:97
+msgid "Iniciar Sesión"
+msgstr "Login"
+
+#: templates/login.html:157
+msgid "Olvidé mi contraseña"
+msgstr "Esqueci minha senha"
+
+#: templates/main.html:2
+msgid "StudioSync CRM - Gestión Integral para Fotógrafos"
+msgstr "StudioSync CRM - Gerenciamento integrado para fotógrafos"
+
+#: templates/main.html:8
+msgid "Studio-Sync CRM"
+msgstr "Studio-Sync CRM"
+
+#: templates/main.html:9
+msgid "La solución todo en uno para la gestión de tu estudio fotográfico"
+msgstr "A solução completa para gerenciar seu estúdio fotográfico"
+
+#: templates/main.html:13
+msgid "¿Qué es StudioSync CRM?"
+msgstr "O que é o StudioSync CRM?"
+
+#: templates/main.html:15
+msgid ""
+"Studio-Sync CRM es una plataforma diseñada específicamente para "
+"fotógrafos profesionales que buscan optimizar \n"
+"            la gestión de su estudio. Desde el registro de clientes y "
+"sesiones hasta el control de inventario y cobros, \n"
+"            nuestra herramienta te permite concentrarte en lo que "
+"realmente importa: tu arte."
+msgstr ""
+"O Studio-Sync CRM é uma plataforma projetada especificamente para "
+"fotógrafos profissionais que desejam otimizar o\n"
+"            gerenciamento de estúdio. Do registro de clientes e sessões "
+"ao controle de inventário e faturamento,\n"
+"            nossa ferramenta permite que você se concentre no que "
+"realmente importa: sua arte."
+
+#: templates/main.html:25
+msgid "Gestión de Paquetes"
+msgstr "Gerenciamento de pacotes"
+
+#: templates/main.html:27
+msgid ""
+"Organiza tus paquetes fotográficos por categorías: New Born, Baby, "
+"Sitter, Smash Cake, \n"
+"                    Eventos familiares y más. Configura precios, duración"
+" y características específicas \n"
+"                    para cada tipo de sesión."
+msgstr ""
+"Organize seus pacotes de fotos por categoria: Recém-nascido, Bebê, Babá, "
+"Smash Cake,\n"
+"                    Eventos familiares e muito mais. Defina os preços, a "
+"duração e os recursos específicos de cada pacote\n"
+"                    para cada tipo de sessão."
+
+#: templates/main.html:37
+msgid "Clientes y Sesiones"
+msgstr "Clientes e sessões"
+
+#: templates/main.html:39
+msgid ""
+"Registra toda la información de tus clientes, agenda sesiones y lleva un "
+"historial \n"
+"                    completo de cada servicio realizado. Incluye "
+"recordatorios automáticos y fichas \n"
+"                    personalizadas para cada cliente."
+msgstr ""
+"Registre todas as informações de seus clientes, agende sessões e mantenha"
+" um histórico completo de cada serviço realizado.\n"
+"                    histórico de cada serviço realizado. Inclui lembretes"
+" automáticos e personalizados para cada cliente.\n"
+"                    personalizados para cada cliente."
+
+#: templates/main.html:49
+msgid "Dashboard Analítico"
+msgstr "Painel analítico"
+
+#: templates/main.html:51
+msgid ""
+"Visualiza tus métricas clave: sesiones por mes, paquetes más vendidos, "
+"ingresos \n"
+"                    mensuales y anuales. Toma decisiones basadas en datos"
+" para hacer crecer tu negocio."
+msgstr ""
+"Visualize suas principais métricas: sessões por mês, pacotes mais "
+"vendidos, receita mensal e anual, receita de vendas e receita de vendas."
+"\n"
+"                    receita mensal e anual. Tome decisões baseadas em "
+"dados para expandir seus negócios."
+
+#: templates/main.html:60 templates/what-we-do.html:30
+msgid "Integración con Google Calendar"
+msgstr "Integração com o Google Calendar"
+
+#: templates/main.html:62
+msgid ""
+"Sincroniza automáticamente todas tus sesiones con Google Calendar para "
+"una mejor \n"
+"                    gestión de tu tiempo. Recibe notificaciones y evita "
+"conflictos de horarios."
+msgstr ""
+"Sincronize automaticamente todas as suas sessões com o Google Calendar "
+"para um melhor gerenciamento do tempo.\n"
+"                    Gerenciamento de tempo. Receba notificações e evite "
+"conflitos de horário."
+
+#: templates/main.html:71
+msgid "Control de Inventario"
+msgstr "Controle de inventário"
+
+#: templates/main.html:73
+msgid ""
+"Lleva un registro detallado de todo tu equipo fotográfico: cámaras, "
+"lentes, \n"
+"                    iluminación y accesorios. Controla mantenimientos, "
+"préstamos y estado de cada artículo."
+msgstr ""
+"Mantenha um registro detalhado de todo o seu equipamento fotográfico: "
+"câmeras, lentes, iluminação e acessórios,\n"
+"                    iluminação e acessórios. Mantenha um registro da "
+"manutenção, dos empréstimos e das condições de cada item."
+
+#: templates/main.html:82
+msgid "Comunicación por WhatsApp"
+msgstr "Comunicação pelo WhatsApp"
+
+#: templates/main.html:84
+msgid ""
+"Envía recordatorios de sesiones, confirmaciones y seguimientos "
+"directamente \n"
+"                    a tus clientes por WhatsApp, todo integrado en la "
+"plataforma."
+msgstr ""
+"Envie lembretes de sessão, confirmações e acompanhamentos diretamente "
+"para seus clientes via\n"
+"                    para seus clientes via WhatsApp, tudo integrado na "
+"plataforma."
+
+#: templates/main.html:92
+msgid "¿Listo para optimizar tu estudio fotográfico?"
+msgstr "Pronto para otimizar seu estúdio fotográfico?"
+
+#: templates/main.html:93
+msgid "Accede ahora a todas las funcionalidades de StudioSync CRM"
+msgstr "Acesse todos os recursos do StudioSync CRM agora mesmo!"
+
+#: templates/main.html:95
+msgid "Ir al Dashboard"
+msgstr "Ir para o Dashboard"
+
+#: templates/main.html:102
+msgid "Todos los derechos reservados."
+msgstr "Todos os direitos reservados."
+
+#: templates/main.html:104
+msgid "Quienes Somos"
+msgstr "Quem somos"
+
+#: templates/main.html:105
+msgid "Que Hacemos"
+msgstr "O que fazemos"
+
+#: templates/main.html:110
+msgid "Contáctanos"
+msgstr "Entre em contato conosco em"
+
+#: templates/privacy.html:2
+msgid "Política de Privacidad - StudioSync CRM"
+msgstr "Política de privacidade - StudioSync CRM"
+
+#: templates/privacy.html:12
+msgid "Información recopilada"
+msgstr "Informações coletadas"
+
+#: templates/privacy.html:14
+msgid ""
+"Únicamente solicitamos tu correo electrónico y una contraseña de "
+"aplicación para gestionar el acceso a nuestra plataforma."
+msgstr ""
+"Solicitamos apenas seu endereço de e-mail e uma senha de aplicativo para "
+"gerenciar o acesso à nossa plataforma."
+
+#: templates/privacy.html:15
+msgid ""
+"No recopilamos información personal adicional ni datos sensibles sin tu "
+"consentimiento explícito."
+msgstr ""
+"Não coletamos informações pessoais adicionais ou dados confidenciais sem "
+"o seu consentimento explícito."
+
+#: templates/privacy.html:20
+msgid "Uso de la información"
+msgstr "Uso de informações"
+
+#: templates/privacy.html:22
+msgid ""
+"Los datos registrados son exclusivamente para la gestión de tu cuenta "
+"dentro de la aplicación."
+msgstr ""
+"Os dados registrados servem exclusivamente para o gerenciamento da sua "
+"conta no aplicativo."
+
+#: templates/privacy.html:23
+msgid "No utilizamos tu información con fines de marketing ni publicidad."
+msgstr "Não usamos suas informações para fins de marketing ou publicidade."
+
+#: templates/privacy.html:28
+msgid "Propiedad y control de los datos"
+msgstr "Propriedade e controle de dados"
+
+#: templates/privacy.html:30
+msgid ""
+"La información ingresada en la aplicación es de uso exclusivo del usuario"
+" propietario de la cuenta."
+msgstr ""
+"As informações inseridas no aplicativo são para uso exclusivo do usuário "
+"proprietário da conta."
+
+#: templates/privacy.html:31
+msgid ""
+"No accedemos ni utilizamos los datos registrados para ningún otro "
+"propósito."
+msgstr ""
+"Não acessamos nem usamos os dados registrados para nenhuma outra "
+"finalidade."
+
+#: templates/privacy.html:36
+msgid "Compartición de información"
+msgstr "Compartilhamento de informações"
+
+#: templates/privacy.html:38
+msgid ""
+"No compartimos, vendemos ni cedemos tu información a terceros bajo "
+"ninguna circunstancia."
+msgstr ""
+"Não compartilhamos, vendemos ou alugamos suas informações a terceiros em "
+"nenhuma circunstância."
+
+#: templates/privacy.html:39
+msgid ""
+"No integramos servicios de terceros que puedan acceder a tus datos sin tu"
+" autorización explícita."
+msgstr ""
+"Não integramos serviços de terceiros que possam acessar seus dados sem "
+"sua permissão explícita."
+
+#: templates/privacy.html:44
+msgid "Seguridad de la información"
+msgstr "Segurança da informação"
+
+#: templates/privacy.html:46
+msgid ""
+"Implementamos medidas de seguridad para proteger la información "
+"almacenada en nuestra plataforma."
+msgstr ""
+"Implementamos medidas de segurança para proteger as informações "
+"armazenadas em nossa plataforma."
+
+#: templates/privacy.html:47
+msgid ""
+"Utilizamos protocolos de cifrado y acceso restringido para garantizar la "
+"confidencialidad de los datos."
+msgstr ""
+"Usamos criptografia e protocolos de acesso restrito para garantir a "
+"confidencialidade dos dados."
+
+#: templates/privacy.html:52
+msgid "Datos relacionados con Google Calendar"
+msgstr "Dados relacionados ao Google Agenda"
+
+#: templates/privacy.html:54
+msgid ""
+"Cuando conectas tu cuenta de Google Calendar con nuestra aplicación, se "
+"crea un calendario adicional llamado \"Studio Sync Calendar\" en tu "
+"cuenta de Google. Este calendario es utilizado exclusivamente para "
+"registrar las sesiones fotográficas programadas a través de nuestra "
+"plataforma."
+msgstr ""
+"Quando você conecta sua conta do Google Agenda ao nosso aplicativo, um "
+"calendário adicional chamado \"Studio Sync Calendar\" é criado em sua "
+"conta do Google. Esse calendário é usado exclusivamente para registrar "
+"sessões de fotos agendadas por meio de nossa plataforma."
+
+#: templates/privacy.html:55
+msgid ""
+"No accedemos, almacenamos ni conservamos en nuestros servidores ningún "
+"dato personal asociado a tu cuenta de Google. Toda la información "
+"permanece bajo tu control en tu cuenta de Google y puede ser modificada o"
+" eliminada directamente desde Google Calendar o desde la aplicación."
+msgstr ""
+"Não acessamos, armazenamos ou retemos em nossos servidores nenhum dado "
+"pessoal associado à sua Conta do Google. Todas as informações permanecem "
+"sob o seu controle na sua Conta do Google e podem ser modificadas ou "
+"excluídas diretamente do Google Agenda ou do aplicativo."
+
+#: templates/privacy.html:57
+msgid ""
+"Retención: No retenemos información relacionada a Google Calendar fuera "
+"del calendario creado en tu cuenta."
+msgstr ""
+"Retenção: não retemos informações relacionadas ao Google Agenda fora do "
+"calendário criado em sua conta."
+
+#: templates/privacy.html:58
+msgid ""
+"Eliminación: Puedes eliminar el calendario \"Studio Sync Calendar\" en "
+"cualquier momento desde tu cuenta de Google Calendar. Si desvinculas tu "
+"cuenta o eliminas tu cuenta en nuestra plataforma, se interrumpe "
+"automáticamente la sincronización."
+msgstr ""
+"Exclusão: Você pode excluir o Studio Sync Calendar a qualquer momento de "
+"sua conta do Google Calendar. Se você desvincular sua conta ou excluir "
+"sua conta em nossa plataforma, a sincronização será automaticamente "
+"interrompida."
+
+#: templates/privacy.html:59
+msgid ""
+"Privacidad: La aplicación no accede a otros calendarios, contactos ni "
+"eventos ajenos al calendario creado."
+msgstr ""
+"Privacidade: o aplicativo não acessa outros calendários, contatos ou "
+"eventos fora do calendário criado."
+
+#: templates/privacy.html:65
+msgid "Actualización de la política"
+msgstr "Atualização da política"
+
+#: templates/privacy.html:67
+msgid "Nos reservamos el derecho de modificar esta política en cualquier momento."
+msgstr "Reservamo-nos o direito de alterar esta política a qualquer momento."
+
+#: templates/privacy.html:68
+msgid ""
+"Las actualizaciones serán reflejadas en esta página y notificadas a los "
+"usuarios cuando sea necesario."
+msgstr ""
+"As atualizações serão refletidas nesta página e notificadas aos usuários "
+"conforme necessário."
+
+#: templates/privacy.html:73
+msgid "¿Tienes preguntas?"
+msgstr "Você tem alguma pergunta?"
+
+#: templates/privacy.html:74
+msgid "Si tienes dudas sobre nuestra política de privacidad, contáctanos en:"
+msgstr ""
+"Se tiver alguma dúvida sobre nossa política de privacidade, entre em "
+"contato conosco:"
+
+#: templates/recuperar_clave.html:2 templates/recuperar_clave.html:4
+msgid "Recuperar Contraseña"
+msgstr "Recuperar senha"
+
+#: templates/recuperar_clave.html:6
+msgid "Correo Electrónico"
+msgstr "Endereço de e-mail"
+
+#: templates/recuperar_clave.html:8
+msgid "Enviar Enlace de Recuperación"
+msgstr "Enviar link de recuperação"
+
+#: templates/recuperar_clave.html:10
+msgid "¿Recuerdas tu contraseña?"
+msgstr "Você se lembra de sua senha?"
+
+#: templates/recuperar_clave.html:10
+msgid "Inicia Sesión"
+msgstr "Login"
+
+#: templates/tos.html:2
+msgid "Términos de Servicio - StudioSync CRM"
+msgstr "Termos de Serviço - StudioSync CRM"
+
+#: templates/tos.html:8
+msgid "Última actualización: "
+msgstr "Última atualização:"
+
+#: templates/tos.html:13
+msgid "1. Aceptación de los Términos"
+msgstr "1. aceitação dos Termos"
+
+#: templates/tos.html:15
+msgid ""
+"Al acceder y utilizar StudioSync CRM, usted acepta cumplir con estos "
+"términos y condiciones. Si no está de acuerdo con alguna parte de estos "
+"términos, no podrá utilizar nuestro servicio."
+msgstr ""
+"Ao acessar e usar o StudioSync CRM, você concorda em obedecer a estes "
+"termos e condições. Se não concordar com qualquer parte destes termos, "
+"você não poderá usar nosso serviço."
+
+#: templates/tos.html:20
+msgid "2. Uso del Servicio"
+msgstr "2. Uso do serviço"
+
+#: templates/tos.html:22
+msgid ""
+"Usted acepta utilizar StudioSync CRM únicamente para fines legales y de "
+"acuerdo con estos términos. No está permitido el uso indebido del "
+"servicio, incluyendo pero no limitado a:"
+msgstr ""
+"Você concorda em usar o StudioSync CRM somente para fins legais e de "
+"acordo com estes termos. O uso indevido do serviço não é permitido, "
+"incluindo, mas não se limitando a:"
+
+#: templates/tos.html:24
+msgid "Violar leyes o regulaciones aplicables."
+msgstr "Violar leis ou regulamentos aplicáveis."
+
+#: templates/tos.html:25
+msgid "Infringir los derechos de propiedad intelectual de terceros."
+msgstr "Infringir os direitos de propriedade intelectual de terceiros."
+
+#: templates/tos.html:26
+msgid "Distribuir contenido malicioso o dañino."
+msgstr "Distribuir conteúdo malicioso ou prejudicial."
+
+#: templates/tos.html:27
+msgid "Intentar acceder a cuentas de otros usuarios sin autorización."
+msgstr "Tentativa de acessar contas de outros usuários sem autorização."
+
+#: templates/tos.html:33
+msgid "3. Modificaciones"
+msgstr "3. alterações"
+
+#: templates/tos.html:35
+msgid ""
+"Nos reservamos el derecho de modificar estos términos en cualquier "
+"momento. Las versiones actualizadas serán publicadas en esta página con "
+"la fecha de última actualización."
+msgstr ""
+"Reservamo-nos o direito de modificar estes termos a qualquer momento. As "
+"versões atualizadas serão publicadas nesta página com a data da última "
+"atualização."
+
+#: templates/tos.html:36
+msgid ""
+"El uso continuado del servicio después de dichos cambios constituirá su "
+"consentimiento a los términos modificados."
+msgstr ""
+"Seu uso continuado do serviço após essas alterações constituirá seu "
+"consentimento com os termos modificados."
+
+#: templates/tos.html:41
+msgid "4. Limitación de Responsabilidad"
+msgstr "4. Limitação de responsabilidade"
+
+#: templates/tos.html:43
+msgid ""
+"StudioSync CRM se proporciona 'tal cual' y 'según disponibilidad'. En la "
+"medida permitida por la ley, no seremos responsables por:"
+msgstr ""
+"O StudioSync CRM é fornecido \"no estado em que se encontra\" e "
+"\"conforme disponível\". Na medida do permitido por lei, não seremos "
+"responsáveis por:"
+
+#: templates/tos.html:45
+msgid "Daños indirectos, incidentales o consecuentes."
+msgstr "Danos indiretos, incidentais ou consequenciais."
+
+#: templates/tos.html:46
+msgid "Pérdida de datos o interrupciones del servicio."
+msgstr "Perda de dados ou interrupções de serviço."
+
+#: templates/tos.html:47
+msgid "Cualquier daño resultante del uso o imposibilidad de uso del servicio."
+msgstr "Qualquer dano resultante do uso ou da incapacidade de usar o serviço."
+
+#: templates/tos.html:53
+msgid "5. Cuentas de Usuario"
+msgstr "5. Contas de usuário"
+
+#: templates/tos.html:55
+msgid ""
+"Usted es responsable de mantener la confidencialidad de su cuenta y "
+"contraseña. Todas las actividades que ocurran bajo su cuenta son su "
+"responsabilidad."
+msgstr ""
+"Você é responsável por manter a confidencialidade de sua conta e senha. "
+"Todas as atividades que ocorrem em sua conta são de sua responsabilidade."
+
+#: templates/tos.html:56
+msgid ""
+"Debe notificarnos inmediatamente cualquier uso no autorizado de su cuenta"
+" o cualquier otra violación de seguridad."
+msgstr ""
+"Você deve nos notificar imediatamente sobre qualquer uso não autorizado "
+"de sua conta ou qualquer outra violação de segurança."
+
+#: templates/tos.html:61
+msgid "6. Contacto"
+msgstr "6. Contato"
+
+#: templates/tos.html:63
+msgid "Para preguntas sobre estos términos, contáctenos en:"
+msgstr ""
+"Em caso de dúvidas sobre esses termos, entre em contato conosco pelo "
+"e-mail:"
+
+#: templates/what-we-do.html:2
+msgid "Qué hacemos - StudioSync CRM"
+msgstr "O que fazemos - StudioSync CRM"
+
+#: templates/what-we-do.html:7
+msgid "Qué hacemos"
+msgstr "O que fazemos"
+
+#: templates/what-we-do.html:12
+msgid "Gestión de Paquetes Fotográficos"
+msgstr "Gerenciamento de pacotes de fotos"
+
+#: templates/what-we-do.html:13
+msgid ""
+"En StudioSync CRM te ayudamos a organizar todos tus paquetes de servicios"
+" de manera clara y eficiente. Puedes crear diferentes categorías, como "
+"sesiones New Born, Baby, Sitter, Smash Cake o eventos familiares, y "
+"definir de forma precisa los precios, la duración y las características "
+"incluidas en cada uno."
+msgstr ""
+"No StudioSync CRM, ajudamos você a organizar todos os seus pacotes de "
+"serviços de forma clara e eficiente. Você pode criar diferentes "
+"categorias, como New Born, Baby, Sitter, Smash Cake ou eventos "
+"familiares, e definir com precisão os preços, a duração e os recursos "
+"incluídos em cada uma delas."
+
+#: templates/what-we-do.html:14
+msgid ""
+"De esta manera, siempre tendrás una visión estructurada de tu portafolio,"
+" lo que facilita la comunicación con tus clientes y la estandarización de"
+" la calidad del servicio."
+msgstr ""
+"Dessa forma, você sempre terá uma visão estruturada do seu portfólio, o "
+"que facilita a comunicação com seus clientes e a padronização da "
+"qualidade do serviço."
+
+#: templates/what-we-do.html:18
+msgid "Gestión Integral de Clientes y Sesiones"
+msgstr "Gerenciamento integrado de clientes e sessões"
+
+#: templates/what-we-do.html:19
+msgid ""
+"Con StudioSync puedes centralizar toda la información de tus clientes en "
+"un mismo lugar. Desde los datos de contacto hasta el historial de "
+"sesiones, pagos y observaciones, cada detalle queda registrado de forma "
+"segura y accesible."
+msgstr ""
+"Com o StudioSync, você pode centralizar todas as informações de seus "
+"clientes em um só lugar. De detalhes de contato a histórico de sessões, "
+"pagamentos e feedback, todos os detalhes são registrados e acessíveis com"
+" segurança."
+
+#: templates/what-we-do.html:20
+msgid ""
+"La plataforma permite programar nuevas sesiones, recibir recordatorios "
+"automáticos y mantener un seguimiento personalizado para cada cliente, "
+"garantizando una experiencia profesional y cercana."
+msgstr ""
+"A plataforma permite que você agende novas sessões, receba lembretes "
+"automáticos e mantenha um acompanhamento personalizado para cada cliente,"
+" garantindo uma experiência profissional e próxima."
+
+#: templates/what-we-do.html:24
+msgid "Dashboard Analítico y Reportes"
+msgstr "Painel analítico e relatórios"
+
+#: templates/what-we-do.html:25
+msgid ""
+"Nuestro panel de control te ofrece una visión completa de tu negocio "
+"creativo. Podrás consultar estadísticas de ventas, cantidad de sesiones "
+"realizadas, paquetes más solicitados e ingresos generados, todo en "
+"gráficos claros e intuitivos."
+msgstr ""
+"Nosso painel de controle oferece uma visão geral completa do seu negócio "
+"criativo. Você pode visualizar as estatísticas de vendas, o número de "
+"sessões concluídas, os pacotes mais solicitados e a receita gerada, tudo "
+"em gráficos claros e intuitivos."
+
+#: templates/what-we-do.html:26
+msgid ""
+"Estas métricas te permiten identificar tendencias, evaluar el crecimiento"
+" de tu estudio y tomar decisiones estratégicas basadas en datos reales."
+msgstr ""
+"Essas métricas permitem que você identifique tendências, avalie o "
+"crescimento do seu estúdio e tome decisões estratégicas com base em dados"
+" reais."
+
+#: templates/what-we-do.html:31
+msgid ""
+"Evita los conflictos de agenda sincronizando tus sesiones con Google "
+"Calendar. De esta forma, tanto tú como tu equipo podrán acceder en todo "
+"momento al calendario actualizado, recibir notificaciones y coordinar "
+"tiempos de forma eficiente."
+msgstr ""
+"Evite conflitos de agendamento sincronizando suas sessões com o Google "
+"Calendar. Dessa forma, você e sua equipe podem sempre ter acesso ao "
+"calendário atualizado, receber notificações e coordenar os horários com "
+"eficiência."
+
+#: templates/what-we-do.html:32
+msgid ""
+"La integración está diseñada para que nunca pierdas una cita y siempre "
+"tengas bajo control tu planificación."
+msgstr ""
+"A integração foi projetada para que você nunca perca um compromisso e "
+"tenha sempre o seu planejamento sob controle."
+
+#: templates/what-we-do.html:36
+msgid "Control de Inventario y Recursos"
+msgstr "Controle de inventário e recursos"
+
+#: templates/what-we-do.html:37
+msgid ""
+"Además de gestionar clientes y sesiones, StudioSync CRM te permite llevar"
+" un control completo de tu equipo de trabajo: cámaras, lentes, luces y "
+"demás accesorios. Podrás registrar mantenimientos, préstamos internos y "
+"estados de cada artículo."
+msgstr ""
+"Além de gerenciar clientes e filmagens, o StudioSync CRM permite manter o"
+" controle total do seu equipamento: câmeras, lentes, luzes e outros "
+"acessórios. É possível registrar a manutenção, os empréstimos internos e "
+"o status de cada item."
+
+#: templates/what-we-do.html:38
+msgid ""
+"Esto asegura que tu material esté siempre disponible y en óptimas "
+"condiciones para cada proyecto."
+msgstr ""
+"Isso garante que seu material esteja sempre disponível e em condições "
+"ideais para cada projeto."
+
+#: templates/what-we-do.html:42
+msgid "Comunicación Directa por WhatsApp"
+msgstr "Comunicação direta pelo WhatsApp"
+
+#: templates/what-we-do.html:43
+msgid ""
+"La relación con tus clientes no termina al cerrar una sesión. Con nuestra"
+" integración de WhatsApp, podrás enviar recordatorios de citas, "
+"confirmaciones y mensajes de seguimiento directamente desde la "
+"plataforma."
+msgstr ""
+"Seu relacionamento com seus clientes não termina quando você se "
+"desconecta. Com a nossa integração com o WhatsApp, você pode enviar "
+"lembretes de compromissos, confirmações e mensagens de acompanhamento "
+"diretamente da plataforma."
+
+#: templates/what-we-do.html:44
+msgid ""
+"Esto mejora la comunicación, fortalece la confianza y facilita la "
+"fidelización de tus clientes."
+msgstr ""
+"Isso melhora a comunicação, gera confiança e facilita a fidelidade do "
+"cliente."
+
+#: templates/what-we-do.html:48
+msgid ""
+"¿Quieres conocer más sobre cómo StudioSync puede transformar tu estudio "
+"creativo?"
+msgstr ""
+"Deseja saber mais sobre como o StudioSync pode transformar seu estúdio "
+"criativo?"
+
+#: templates/what-we-do.html:49
+msgid ""
+"Estaremos encantados de contarte todos los detalles y mostrarte cómo "
+"nuestra plataforma puede adaptarse a las necesidades de tu negocio."
+msgstr ""
+"Teremos prazer em lhe informar todos os detalhes e mostrar como nossa "
+"plataforma pode ser adaptada às suas necessidades comerciais."
+

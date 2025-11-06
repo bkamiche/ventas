@@ -1,0 +1,34 @@
+{% extends 'base.html' %}
+{% block title %}{{ _("Registrar Venta") }}{% endblock %}
+{% block content %}
+    <h1>{{ _("Registrar Venta") }}</h1>
+    <form method="POST" enctype="multipart/form-data" id="clienteForm">
+    <table class="edicion">
+        <tr>
+            <td>
+                <label for="fecha_registro">{{ _("Fecha de Registro") }}:</label>
+                <input type="date" name="fecha_registro" min="2025-01-01" value="{{ datetime.now().strftime('%Y-%m-%d') }}" required>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <label for="descripcion">{{ _("Descripción") }}:</label>
+                <input type="text" name="descripcion" required maxlength="100">
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <label for="foto">{{ _("Foto") }}:</label>
+                <input type="file" id="foto" name="foto" required accept="image/*">
+            </td>
+        </tr>
+        <tr>
+            <td colspan="2">
+                <button type="submit" id="submitBtn">{{ _("Guardar") }}</button>
+                <button type="button" class="back" onclick="history.back()">{{ _("Cancelar") }}</button>
+            </td>
+        </tr>
+    </table>
+    <input type="hidden" name="cropped_image" id="cropped_image">
+    </form>
+{% endblock %}

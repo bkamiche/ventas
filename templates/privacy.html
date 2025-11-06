@@ -1,0 +1,162 @@
+{% extends 'base_sinmenu.html' %}
+{% block title %}{{ _("Política de Privacidad - CRM") }}{% endblock %}
+{% block content %}
+<div class="privacy-container">
+    <header class="privacy-header">
+        <img src="{{ url_for('static', path=logo) }}" alt="CRM" class="privacy-logo">
+        <h1>{{ _("Política de Privacidad") }}</h1>
+    </header>
+
+    <main class="privacy-content">
+        <div class="privacy-section">
+            <h2><i class="fas fa-shield-alt privacy-icon"></i> {{ _("Información recopilada") }}</h2>
+            <div class="privacy-details">
+                <p>{{ _("Únicamente solicitamos tu correo electrónico y una contraseña de aplicación para gestionar el acceso a nuestra plataforma.") }}</p>
+                <p>{{ _("No recopilamos información personal adicional ni datos sensibles sin tu consentimiento explícito.") }}</p>
+            </div>
+        </div>
+
+        <div class="privacy-section">
+            <h2><i class="fas fa-user-lock privacy-icon"></i> {{ _("Uso de la información") }}</h2>
+            <div class="privacy-details">
+                <p>{{ _("Los datos registrados son exclusivamente para la gestión de tu cuenta dentro de la aplicación.") }}</p>
+                <p>{{ _("No utilizamos tu información con fines de marketing ni publicidad.") }}</p>
+            </div>
+        </div>
+
+        <div class="privacy-section">
+            <h2><i class="fas fa-database privacy-icon"></i> {{ _("Propiedad y control de los datos") }}</h2>
+            <div class="privacy-details">
+                <p>{{ _("La información ingresada en la aplicación es de uso exclusivo del usuario propietario de la cuenta.") }}</p>
+                <p>{{ _("No accedemos ni utilizamos los datos registrados para ningún otro propósito.") }}</p>
+            </div>
+        </div>
+
+        <div class="privacy-section">
+            <h2><i class="fas fa-exchange-alt privacy-icon"></i> {{ _("Compartición de información") }}</h2>
+            <div class="privacy-details">
+                <p>{{ _("No compartimos, vendemos ni cedemos tu información a terceros bajo ninguna circunstancia.") }}</p>
+                <p>{{ _("No integramos servicios de terceros que puedan acceder a tus datos sin tu autorización explícita.") }}</p>
+            </div>
+        </div>
+
+        <div class="privacy-section">
+            <h2><i class="fas fa-lock privacy-icon"></i> {{ _("Seguridad de la información") }}</h2>
+            <div class="privacy-details">
+                <p>{{ _("Implementamos medidas de seguridad para proteger la información almacenada en nuestra plataforma.") }}</p>
+                <p>{{ _("Utilizamos protocolos de cifrado y acceso restringido para garantizar la confidencialidad de los datos.") }}</p>
+            </div>
+        </div>
+
+        <div class="privacy-section">
+            <h2><i class="fas fa-sync-alt privacy-icon"></i> {{ _("Actualización de la política") }}</h2>
+            <div class="privacy-details">
+                <p>{{ _("Nos reservamos el derecho de modificar esta política en cualquier momento.") }}</p>
+                <p>{{ _("Las actualizaciones serán reflejadas en esta página y notificadas a los usuarios cuando sea necesario.") }}</p>
+            </div>
+        </div>
+
+        <div class="privacy-contact">
+            <h3>{{ _("¿Tienes preguntas?") }}</h3>
+            <p>{{ _("Si tienes dudas sobre nuestra política de privacidad, contáctanos en:") }}</p>
+            <a href="mailto:" class="contact-link">
+                <i class="fas fa-envelope"></i> correo@correo.com
+            </a>
+        </div>
+    </main>
+
+    <footer class="privacy-footer">
+        <p>&copy; {{ _("2025 StudioSync CRM. Todos los derechos reservados.") }}</p>
+        <div class="footer-links">
+            <a href="{{ url_for('tos') }}">{{ _("Términos de Servicio") }}</a>
+            <a href="{{ url_for('privacy') }}">{{ _("Política de Privacidad") }}</a>
+        </div>
+    </footer>
+</div>
+
+<style>
+    .privacy-container {
+        max-width: 1000px;
+        margin: 0 auto;
+        padding: 2rem;
+        font-family: 'Poppins', sans-serif;
+        color: #333;
+    }
+    .privacy-header {
+        text-align: center;
+        margin-bottom: 3rem;
+    }
+    .privacy-logo {
+        width: 220px;
+        margin-bottom: 1rem;
+    }
+    .privacy-header h1 {
+        font-size: 2.5rem;
+        color: #6a11cb;
+        margin-bottom: 1rem;
+    }
+    .privacy-section {
+        background: white;
+        border-radius: 8px;
+        padding: 1.5rem;
+        margin-bottom: 1.5rem;
+        box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+    }
+    .privacy-section h2 {
+        color: #2575fc;
+        font-size: 1.3rem;
+        margin-bottom: 1rem;
+        display: flex;
+        align-items: center;
+    }
+    .privacy-icon {
+        margin-right: 10px;
+        color: #6a11cb;
+    }
+    .privacy-details {
+        padding-left: 2rem;
+    }
+    .privacy-details p {
+        margin-bottom: 0.8rem;
+    }
+    .privacy-contact {
+        text-align: center;
+        margin: 3rem 0;
+        padding: 2rem;
+        background: #f8f9fa;
+        border-radius: 8px;
+    }
+    .contact-link {
+        display: inline-block;
+        margin-top: 1rem;
+        color: #2575fc;
+        text-decoration: none;
+        font-weight: 600;
+    }
+    .privacy-footer {
+        text-align: center;
+        margin-top: 3rem;
+        padding-top: 2rem;
+        border-top: 1px solid #eee;
+    }
+    .footer-links {
+        margin-top: 1rem;
+    }
+    .footer-links a {
+        margin: 0 1rem;
+        color: #6a11cb;
+        text-decoration: none;
+    }
+    @media (max-width: 768px) {
+        .privacy-container {
+            padding: 1rem;
+        }
+        .privacy-header h1 {
+            font-size: 2rem;
+        }
+        .privacy-details {
+            padding-left: 1rem;
+        }
+    }
+</style>
+{% endblock %}

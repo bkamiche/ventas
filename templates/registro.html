@@ -1,0 +1,156 @@
+{% extends 'base.html' %}
+{% block title %}{{ _("Registro de Ventas") }}{% endblock %}
+{% block content %}
+    <h1>{{ _("Registro de Ventas") }}</h1>
+    <form method="POST" class="buscador-form" id="filtro-form">  {# Cambiar a método POST #}
+        <input type="hidden" id="ordenar_por" name="ordenar_por" value="{{ ordenar_por }}">
+        <input type="hidden" id="orden" name="orden" value="{{ orden }}">
+        <input type="hidden" id="page" name="page" value="{{ page }}">
+        <div class="filtro-inline">
+           <label for="status">{{ _("Status") }}:</label>
+           <select class="select3" name="status" id="status">
+               <option value="">{{ _("Todos") }}</option>
+               <option value="PENDING" {% if status == 'PENDING' %}selected{% endif %}>{{ _("Pendiente") }}</option>  {# Obtener el valor de status del formulario #}
+               <option value="VALIDADO" {% if status == 'VALIDADO' %}selected{% endif %}>{{ _("Validado") }}</option>  {# Obtener el valor de status del formulario #}
+               <option value="CANCELADO" {% if status == 'CANCELADO' %}selected{% endif %}>{{ _("Cancelado") }}</option>  {# Obtener el valor de status del formulario #}
+           </select>
+           <label for="fecha">{{ _("Fecha") }}:</label>
+           <input type="date" name="fecha" id="fecha" value="{{ fecha.strftime('%Y-%m-%d') if fecha else ''}}">
+           {% if current_user.nivel_acceso != 'admin' %}
+           <button type="submit" onClick="setpage(1); return false;">{{ _("Filtrar") }}</button>
+           {% endif %}
+       </div>
+       {% if current_user.nivel_acceso == 'admin' %}    
+       <div class="filtro-inline">
+            <label for="usuario">{{ _("Usuario") }}:</label>
+            <select class="select2" name="usuario" id="usuario">
+                <option value="">{{ _("Todos") }}</option>
+                {% for usuario in usuarios %}
+                    <option value="{{ usuario.id }}" {% if usuario.id == userid %}selected{% endif %}>{{ usuario.correo }}</option>
+                {% endfor %}
+            </select>
+            <label for="yape">{{ _("Yape") }}:</label>
+            <input type="text" name="yape" id="yape" value="{{ yape }}">
+            <button type="submit" onClick="setpage(1); return false;">{{ _("Filtrar") }}</button>
+       </div>
+       {% endif %}
+    </form>
+
+    <br>
+    <a class="add" href="{{ request.url_for('agregar_venta') }}">{{ _("Registrar Venta") }}</a>
+    <table class="tabla-clientes">
+        <thead>
+            <tr>
+                <th><a href="#" onClick="setparameters('fecha'); return false;">
+                    {{ _("Fecha") }}
+                    {% if ordenar_por == 'fecha' %}
+                        {% if orden == 'asc' %}
+                            &#9650;
+                        {% else %}
+                            &#9660;
+                        {% endif %}
+                    {% endif %}
+                </a></th>
+                {% if current_user.nivel_acceso == 'admin' %}
+                <th><a href="#" onClick="setparameters('usuario'); return false;">{{ _("Usuario") }}
+                    {% if ordenar_por == 'usuario' %}
+                        {% if orden == 'asc' %}
+                            &#9650;
+                        {% else %}
+                            &#9660;
+                        {% endif %}
+                    {% endif %}
+                </a></th>
+                <th><a href="#" onClick="setparameters('yape'); return false;">{{ _("Yape") }}
+                    {% if ordenar_por == 'yape' %}
+                        {% if orden == 'asc' %}
+                            &#9650;
+                        {% else %}
+                            &#9660;
+                        {% endif %}
+                    {% endif %}
+                </a></th>
+                {% endif %}
+                <th>{{ _("Descripción") }}</th>
+                <th>{{ _("SKU/IMEI") }}</th>
+                <th>{{ _("Status") }}</th>
+                <th>{{ _("Puntos") }}</th>
+                <th>{{ _("Comisión") }}</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% if current_user.nivel_acceso == 'admin' %}
+                {% for venta, correo, yape in ventas %} 
+                    <tr>
+                        <td>{{ venta.fecha_registro.strftime('%Y-%m-%d') }}</td>
+                        <td>{{ correo }}</td>
+                        <td>{{ yape }}</td>
+                        <td>{{ venta.descripcion }}</td>
+                        <td>{{ venta.dato_leido }}</td>
+                        <td>{{ venta.status.value.upper() }}</td>
+                        <td>{{ venta.puntos }}</td>
+                        <td>{{ venta.comision }}</td>
+                    </tr>
+                {% endfor %}
+            {% else %}
+                {% for venta in ventas %}
+                    <tr>
+                        <td>{{ venta.fecha_registro.strftime('%Y-%m-%d') }}</td>
+                        <td>{{ venta.descripcion }}</td>
+                        <td>{{ venta.dato_leido }}</td>
+                        <td>{{ venta.status.value.upper() }}</td>
+                        <td>{{ venta.puntos }}</td>
+                        <td>{{ venta.comision }}</td>
+                    </tr>
+                {% endfor %}
+            {% endif %}
+        </tbody>
+    </table>
+    {# Paginación #}
+    <nav aria-label="Page navigation example" class="paginador">
+        <ul class="pagination">
+            {% if page > 1 %}
+                <li class="page-item"><a class="page-link" href="#" onClick="setpage({{ page-1 }}); return false;">{{ _("Anterior") }}</a></li>  {# Pasar los parámetros del formulario #}
+            {% endif %}
+            {% for page_num in pages %}
+                {% if page_num %}
+                    {% if page_num != page %}
+                        <li class="page-item"><a class="page-link" href="#" onClick="setpage({{ page_num }}); return false;">{{ page_num }}</a></li>  {# Pasar los parámetros del formulario #}
+                    {% else %}
+                        <li class="page-item active"><a class="page-link" href="#">{{ page_num }}</a></li>
+                    {% endif %}
+                {% else %}
+                    <li class="page-item disabled"><a class="page-link" href="#">...</a></li>
+                {% endif %}
+            {% endfor %}
+            {% if page < total_pages %}
+                <li class="page-item"><a class="page-link" href="#" onClick="setpage({{ page+1 }}); return false;">{{ _("Siguiente") }}</a></li>  {# Pasar los parámetros del formulario #}
+            {% endif %}
+        </ul>
+    </nav>
+    <script>
+        function setparameters(a) {
+            const ordenarPor = document.getElementById('ordenar_por');
+            const orden = document.getElementById('orden');
+            // Cambiar el orden si ya está ordenando por el mismo campo
+            if (ordenarPor.value === a) {
+                orden.value = orden.value === 'asc' ? 'desc' : 'asc';
+            } else {
+                // Si es un campo nuevo, establecer el orden por defecto 'asc'
+                orden.value = 'asc';
+            }
+            // Actualizar el campo por el cual se ordena
+            ordenarPor.value = a;
+            // Enviar el formulario
+            document.getElementById('page').value = 1;
+            document.getElementById('filtro-form').submit();
+        }
+        function setpage(n) {
+            document.getElementById('page').value = n;
+            document.getElementById('filtro-form').submit();
+        }
+        function redirigir(url) {
+            window.location.href = url;
+        }
+    </script>
+{% endblock %}

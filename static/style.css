@@ -1,0 +1,1047 @@
+/* Estilos generales */
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Poppins', sans-serif;
+  background: linear-gradient(90deg, #6a11cb, #2575fc);
+  color: #333;
+}
+
+h1, h2 {
+  color: #333;
+}
+
+a {
+  color: #007bff;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+a.recoverlink {
+  color: #fff;
+}
+
+/* Estilos para tablas */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.5);
+  backdrop-filter: blur(10px);
+  border-radius: 10px;
+}
+
+th, td {
+  border: 1px solid #ddd;
+  padding: 5px;
+  text-align: left;
+}
+
+th {
+  background-color: #f0f0f0;
+}
+
+/* Estilos para formularios */
+form {
+  margin-top: 20px;
+}
+
+td form {
+  margin-top: 0px !important;
+}
+
+label {
+  display: block;
+  margin-bottom: 5px;
+}
+
+input[type="text"],
+input[type="password"],
+input[type="date"],
+input[type="time"],
+input[type="email"],
+input[type="number"],
+select {
+  width: 100%;
+  padding: 8px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  box-sizing: border-box;
+  margin-bottom: 10px;
+}
+
+button.submit,
+button[type="submit"] {
+  background-color: #007bff;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+button.submit {
+  margin-top:10px;
+}
+
+a.back,
+button.back {
+  background-color: red;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  text-decoration: none;
+}
+a.back:hover {
+  text-decoration: none;
+}
+a.add {
+  background-color: rgb(251, 251, 128);
+  color: black;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  text-decoration: none;
+}
+a.add:hover {
+  text-decoration: none !important;
+}
+
+a.edit {
+  background-color: #92fb80;
+  color: black;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  text-decoration: none;
+}
+a.edit:hover {
+  text-decoration: none !important;
+}
+
+table.tabla tr,
+table.tabla-cliente-hijos tr,
+table.tabla-pagos-sesion tr, 
+table.tabla-sesiones-cliente tr,
+table.tabla-clientes tr {
+  cursor:pointer !important;
+}
+
+/* Estilos adicionales */
+.container {
+  display: block;
+  margin: 75px 20px;
+  background-color: #fff;
+  padding: 20px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(10px);
+  border-radius: 10px;
+}
+
+.error {
+  color: red;
+}
+
+nav.menu ul {
+  list-style-type: none;
+  margin: 0 0;
+  padding: 0px 0px 0px 0px;
+  overflow: hidden;
+  background-color: #333;
+  position: fixed; /* Fijar la posición del menú */
+  top: 0px; /* Fijar el menú en la parte superior */
+  width: 100%; /* Que el menú ocupe todo el ancho de la pantalla */
+  z-index: 100; /* Asegurar que el menú esté encima de otros elementos */
+  color: #fff;
+}
+
+nav.menu li {
+  float: left;
+}
+
+nav.menu li a {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 12px;
+  text-decoration: none;
+  font-size: 1em;
+}
+
+nav.menu li a:hover {
+  background-color: #111;
+}
+
+nav.menu li.user-info {
+  margin-left: auto; /* Empuja este elemento hacia la derecha */
+}
+
+nav.menu li.user-infox a {
+  cursor: default !important; /* Evita que el cursor cambie a pointer */
+}
+
+nav.menu li.user-info a:hover {
+  background-color: transparent !important; /* Evita el cambio de color al pasar el mouse */
+}
+
+nav.menu li.logo img {
+  width:60px;
+  margin: 5px 0px 0px 10px;
+  border: 0px solid transparent !important;
+  border-radius:50% !important;
+}
+nav.menu li.logo img:hover {
+  opacity: 1 !important;
+}
+
+tr.link:hover {
+  cursor: pointer !important;
+}
+
+/* Ajusta el margen entre la bandera y el texto */
+.flag-icon {
+  width: 20px;
+  height: 15px;
+  margin-right: 8px;
+  vertical-align: middle;
+  display: inline-block;
+}
+
+/* Estilos para la caja de observaciones */
+textarea,
+textarea[name="observaciones"] {
+  width: 100%;
+  height: 150px;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  box-sizing: border-box;
+  resize: vertical; /* Permitir redimensionar verticalmente */
+  font-family: inherit; /* Heredar la fuente del cuerpo */
+}
+
+img {
+  border-radius: 50%;
+  border: 2px solid #ddd;
+}
+
+table td img {
+  width: 30px;
+  height: 30px;
+  display: inline-flex;
+  vertical-align: middle;
+}
+
+img:hover {
+  opacity: 0.8;
+}
+
+.foto-cliente {
+  float: right;  /* Flota la imagen a la derecha */
+  margin-left: 20px;  /* Espacio entre la imagen y el texto */
+}
+
+/* Estilos para filas pares */
+table tr:nth-child(even) {
+  background-color: #f2f2f2; /* Color de fondo para filas pares */
+}
+
+table.edicion tr td {
+  width: 50%;
+}
+
+table.edicion tr:hover,
+table.edicion tr {
+  background-color: #ffffff !important;
+}
+
+/* Estilos para hover en filas */
+table tr:hover {
+  background-color: #e0e0e0; /* Color de fondo al pasar el cursor */
+}
+
+.paquetes-container {
+  display: flex;  /*  Flexbox para organizar los paquetes */
+  flex-wrap: wrap;  /* Permitir que los paquetes se ajusten a varias filas */
+  justify-content: space-around; /* Distribuir el espacio entre los paquetes */
+}
+
+.paquete {
+  background-color: #f0f0f0;  /* Color de fondo de la tarjeta */
+  border: 1px solid #ddd;  /* Borde de la tarjeta */
+  border-radius: 10px;  /* Esquinas redondeadas */
+  padding: 20px;  /* Espacio interno */
+  margin-bottom: 20px;  /* Espacio entre tarjetas */
+  width: 200px;  /* Ancho de la tarjeta */
+  text-align: center;  /* Centrar el texto */
+}
+
+.paquete-nombre {
+  font-weight: bold;  /* Nombre del paquete en negrita */
+  color: #000000;
+}
+
+a.paquete-link {  /*  Estilo para el enlace de la tarjeta */
+  text-decoration: none;  /* Quitar el subrayado */
+  color: #000;
+}
+
+a.paquete-link:hover {  /*  Estilo para el enlace de la tarjeta */
+  text-decoration: none !important;  /* Quitar el subrayado */
+}
+
+/* Alineación a la derecha para valores numéricos en tablas de sesiones */
+.tabla-sesiones td:nth-child(5),  /* Movilidad */
+.tabla-sesiones td:nth-child(6),  /* Persona Adicional */
+.tabla-sesiones td:nth-child(7),  /* Fotos Adicionales */
+.tabla-sesiones td:nth-child(8),  /* Imprimibles */
+.tabla-sesiones td:nth-child(9), /* Photobook */
+.tabla-sesiones td:nth-child(10), /* Cuadro */
+.tabla-sesiones td:nth-child(11)  /* Adicionales */
+ {
+  text-align: right;
+}
+
+.tabla-sesiones-cliente {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+}
+
+.tabla-sesiones-cliente th, .tabla-sesiones-cliente td {
+  border: 1px solid #ccc; /* Borde más suave */
+  padding: 5px;
+  text-align: left;
+}
+
+.tabla-sesiones-cliente th {
+  background-color: #e0e0e0; /* Color de fondo más claro */
+  font-weight: bold;
+}
+
+.tabla-sesiones-cliente tr:nth-child(even) {
+  background-color: #f5f5f5; /* Color de fondo para filas pares */
+}
+
+.tabla-sesiones-cliente tr:hover {
+  background-color: #f0f0f0; /* Color de fondo al pasar el cursor */
+}
+
+/* Alineación a la derecha para la columna Valor Total */
+.tabla-sesiones-cliente td:nth-child(5) { /* Columna Valor Total */
+  text-align: right;
+}
+.tabla-sesiones-cliente td:nth-child(6) { /* Columna Valor Total */
+  text-align: right;
+}
+.tabla-sesiones-cliente td:nth-child(7) { /* Columna Valor Total */
+  text-align: right;
+}
+
+.tabla-clientes {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+}
+
+.tabla-clientes th, .tabla-clientes td {
+  border: 1px solid #ddd;
+  padding: 5px;
+  text-align: left;
+}
+
+.tabla-clientes th {
+  background-color: #f0f0f0;
+}
+
+/* Alineación a la derecha para las columnas Hijos y Sesiones */
+.tabla-clientes td:nth-child(6), /* Columna Número de Hijos */
+.tabla-clientes td:nth-child(7)  /* Columna Número de Sesiones */ {
+  text-align: right;
+}
+
+.puntuacion-1 { /* 1 estrella: rojo */
+  background-color: #ffdddd;
+  padding: 5px;
+  border-radius: 5px;
+}
+
+.puntuacion-2 { /* 2 estrellas: naranja */
+  background-color: #ffeecc;
+  padding: 5px;
+  border-radius: 5px;
+}
+
+.puntuacion-3 { /* 3 estrellas: amarillo */
+  background-color: #ffffcc;
+  padding: 5px;
+  border-radius: 5px;
+}
+
+.puntuacion-4 { /* 4 estrellas: amarillo verdoso */
+  background-color: #eeffcc;
+  padding: 5px;
+  border-radius: 5px;
+}
+
+.puntuacion-5 { /* 5 estrellas: verde */
+  background-color: #ccffcc;
+  padding: 5px;
+  border-radius: 5px;
+}
+
+.paginador {
+  margin-top: 20px; /* Espacio superior */
+  text-align: center; /* Centrar el paginador */
+}
+
+.paginador .pagination {
+  display: inline-block; /* Mostrar en línea */
+  margin: 0; /* Quitar margen por defecto */
+  padding: 0; /* Quitar padding por defecto */
+}
+
+.paginador .page-item {
+  display: inline-block; /* Mostrar elementos en línea */
+  margin: 0 5px; /* Espacio entre elementos */
+}
+
+.paginador .page-link {
+  color: #007bff; /* Color del enlace */
+  padding: 5px 10px; /* Padding del enlace */
+  border: 1px solid #ddd; /* Borde del enlace */
+  border-radius: 5px; /* Esquinas redondeadas */
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+  backdrop-filter: blur(10px);
+}
+
+.paginador .page-item.active .page-link {
+  background-color: #007bff; /* Color de fondo del elemento activo */
+  color: white; /* Color del texto del elemento activo */
+}
+
+.tabla-resumen {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 20px; /* Espacio inferior */
+}
+
+.tabla-resumen th, .tabla-resumen td {
+  border: 1px solid #ddd;
+  padding: 5px;
+  text-align: left; /* Alineación por defecto a la izquierda */
+}
+
+.tabla-resumen th {
+  background-color: #f0f0f0;
+}
+
+/* Alineación a la derecha para las columnas de valores */
+.tabla-resumen td:nth-child(2), /* Enero */
+.tabla-resumen td:nth-child(3), /* Febrero */
+.tabla-resumen td:nth-child(4), /* Marzo */
+.tabla-resumen td:nth-child(5), /* Abril */
+.tabla-resumen td:nth-child(6), /* Mayo */
+.tabla-resumen td:nth-child(7), /* Junio */
+.tabla-resumen td:nth-child(8), /* Julio */
+.tabla-resumen td:nth-child(9), /* Agosto */
+.tabla-resumen td:nth-child(10), /* Septiembre */
+.tabla-resumen td:nth-child(11), /* Octubre */
+.tabla-resumen td:nth-child(12), /* Noviembre */
+.tabla-resumen td:nth-child(13), /* Diciembre */
+.tabla-resumen td:nth-child(14) /* Total */ {
+  text-align: right;
+}
+
+/* Estilos para la tabla de detalle */
+.tabla-detalle {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+}
+
+.tabla-detalle th, .tabla-detalle td {
+  border: 1px solid #ddd;
+  padding: 5px;
+  text-align: left;
+}
+
+.tabla-detalle th {
+  background-color: #f0f0f0;
+}
+
+/* Alineación a la derecha para la columna Monto */
+.tabla-detalle td:nth-child(7) { /* Columna Monto (S/) */
+  text-align: right;
+}
+
+.consaldo {
+  background-color:red !important;
+  color: white !important;
+}
+
+span.select2 {
+  margin-right:10px;
+  margin-bottom:10px;
+}
+td span.select2 {
+  margin-right:0px;
+  margin-bottom:10px;
+}
+.buscador-form .filtro-inline {
+  display: flex;  /* Usar flexbox para alinear los elementos */
+  align-items: center;  /* Alinear verticalmente los elementos */
+}
+
+.buscador-form .filtro-inline label {
+  margin-right: 10px;  /* Espacio entre las etiquetas y los campos */
+}
+
+.buscador-form .filtro-inline input,
+.buscador-form .filtro-inline select,
+.buscador-form .filtro-inline button {
+  margin-right: 10px;  /* Espacio entre los campos */
+}
+
+#filtro-form .filtro-linea {
+  display: flex;  /* Mostrar los elementos en la misma línea */
+  align-items: center;  /* Alinear verticalmente al centro */
+  margin-bottom: 10px;
+}
+
+#filtro-form .filtro-linea label {
+  margin-right: 10px;  /* Espacio entre la etiqueta y el campo */
+}
+
+#filtro-form input, 
+#filtro-form select,
+#filtro-form button {
+  margin-right: 10px; 
+}
+
+.buscador-form button,
+#filtro-form button {
+  margin-top: -10px;
+}
+
+/* Alineación a la derecha para las columnas de totales */
+.tabla-clientes td:nth-child(8), /* Columna Total Cobros (S/) */
+.tabla-clientes td:nth-child(9), /* Columna Total Pagos (S/) */
+.tabla-clientes td:nth-child(10)  /* Columna Saldo (S/) */ {
+  text-align: right;
+}
+
+.dashboard-container {  /* Contenedor de las tarjetas */
+  display: flex;        /* Activar Flexbox */
+  flex-wrap: wrap;     /* Permitir que las tarjetas se ajusten a varias líneas */
+  gap: 20px;           /* Espacio entre las tarjetas */
+  justify-content: center; /* Centrar las tarjetas horizontalmente */
+}
+
+.tarjeta {
+  background-color: #f0f0f0;  /* Color de fondo de la tarjeta */
+  border: 1px solid #ddd;  /* Borde de la tarjeta */
+  border-radius: 5%;  /* Esquinas redondeadas */
+  padding: 20px;  /* Espacio interno */
+  margin-bottom: 20px;  /* Espacio entre tarjetas */
+  flex: 1 0 300px;
+  display: flex;           /* Activar Flexbox en la tarjeta */
+  flex-direction: column;  /* Alinear los elementos en columna */
+  justify-content: flex-start;
+}
+
+.dashboard-barras img {
+  border-radius: 0;
+  border: 0;
+}
+
+.monto-grande {
+  font-size: 48px;  /* Ajustar el tamaño de la fuente */
+  font-weight: bold;  /* Opcional: poner el monto en negrita */
+}
+
+.tarjeta .contenido-tarjeta { /* Nueva clase para el contenido de la tarjeta */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  flex-grow: 1; /* Permitir que el contenido ocupe el espacio disponible */
+}
+
+.tarjeta h2 {
+  font-size: 1.2em;
+}
+
+.calendario {
+  width: 100%;
+  border-collapse: collapse;
+  table-layout: fixed;  /*  Ancho de columna igual */
+}
+.calendario th {
+  text-align:center !important;
+}
+.calendario th, .calendario td {
+  border: 1px solid #ddd;
+  padding: 10px;
+  text-align: left;
+  width: 14.28%;  /*  Ancho igual para cada día (100% / 7 días) */
+}
+.calendario td {
+  vertical-align: top;
+  overflow: hidden;
+}
+.calendario tr, .calendario td {
+  min-height: 200px !important;
+}
+.calendario th {
+  background-color: #f0f0f0;
+}
+.calendario .dia {
+  position: relative;  /*  Para posicionar el número del día */
+}
+.calendario .numero-dia {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  font-size: 18px;  /*  Tamaño de fuente más grande */
+  font-weight: bold;
+}
+
+.calendario .sesiones {
+  margin-top: 30px;  /*  Espacio entre el número del día y las sesiones */
+  list-style: none;
+  padding: 0;
+}
+
+table.calendario tr:nth-child(even),
+table.calendario tr:hover {
+  background-color:transparent !important;
+}
+table.calendario tr td.data:hover {
+  background-color: #f0f0f0 !important;
+}
+table.calendario tr td ul li {
+  font-size: 0.8em;
+  padding:3px 3px;
+  margin:0px;
+  border-radius: 4px;
+}
+.calendario .sesiones li a {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  max-width: 100%;
+  display: inline-block;
+  padding: 0px;
+  margin: 0px;
+  text-decoration: none !important;
+}
+table.calendario tr td.actual {
+  background-color: lightblue;
+  border:2px solid black
+}
+.calendario td:nth-child(7) {  /* Sábado */
+  background-color: #E0F2F7; 
+}
+.calendario td:nth-child(1) {  /* Domingo */
+  background-color: #FFF3E0;
+  background-image: repeating-linear-gradient(45deg, transparent, transparent 5px, rgba(0, 0, 0, 0.1) 5px, rgba(0, 0, 0, 0.1) 10px);  /* Líneas inclinadas */
+}
+.calendario .dia-feriado {
+  background-color: #FFEB3B !important;  /* Color de fondo amarillo */
+}
+.calendario .nombre-feriado {
+  font-weight: bold;
+  text-align:center !important;
+  white-space: nowrap;
+  display: block;
+  overflow: hidden;
+  max-width: 100%;
+  font-size:0.8em;
+  color: white;
+  background-color:red;
+  margin:0px;
+  padding:3px 3px;
+  animation: blink 2s infinite;
+  border-radius: 4px;
+}
+.blinking {
+  animation: blink 1s infinite;
+}
+
+@keyframes blink {
+  50% {
+    opacity: 0;
+  }
+}
+
+body.modal-open {
+  overflow: hidden;
+}
+
+div.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5); /* opacidad opcional para resaltar el modal */
+  z-index: 9998;
+  display: none;
+}
+
+div.MyDiv {
+  position: fixed;
+  top: 15%;
+  left: 15%;
+  right: 15%;
+  bottom: 15%;
+  z-index: 9999;
+  background-color: #dcdcdc;
+  box-shadow: 0 0 10px rgba(0,0,0,0.3);
+  display:none;
+  padding: 20px;
+  box-sizing: border-box;
+  overflow: auto;
+  justify-content: center;
+  align-items: center;
+}
+
+div.MyDiv img {
+  border-radius: 0 !important;
+  border: 0 !important;
+}
+
+div.MyDiv img:hover {
+  opacity: 1 !important;
+}
+
+/* Botón de cierre flotante "X" */
+.modal-close {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  text-decoration: none;
+  font-size: 24px;
+  font-weight: bold;
+  color: #333;
+  cursor: pointer;
+}
+
+/* Estilos para los mensajes flash */
+#flash-messages {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  z-index: 1000;
+}
+
+.alert {
+  padding: 15px;
+  margin-bottom: 10px;
+  border-radius: 5px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  opacity: 0;
+  transform: translateX(100%);
+  transition: opacity 0.5s ease, transform 0.5s ease;
+}
+
+.alert.show {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+.alert-success {
+  background-color: #d4edda;
+  color: #155724;
+  border: 1px solid #c3e6cb;
+}
+
+.alert-error {
+  background-color: #f8d7da;
+  color: #721c24;
+  border: 1px solid #f5c6cb;
+}
+
+.alert-info {
+  background-color: #d1ecf1;
+  color: #0c5460;
+  border: 1px solid #bee5eb;
+}
+
+.alert-warning {
+  background-color: #fff3cd;
+  color: #856404;
+  border: 1px solid #ffeeba;
+}
+
+table.edicion img {
+  width:150px;
+  height:150px;
+  border-radius: 0 !important;
+}
+
+img.normal {
+  width: auto !important;
+  height: auto !important;
+  max-width: 400px !important;
+  max-height: 400px !important;
+  border-radius: 0 !important;
+  border: 0 !important;
+}
+
+img.normal:hover {
+  opacity: 1 !important;
+}
+
+img.studio_logo {
+  width: auto !important;
+  height: auto !important;
+  max-width: 400px !important;
+  max-height: 400px !important;
+  border-radius: 0 !important;
+  border: 0 !important;
+ 
+}
+
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 34px;
+  height: 20px;
+}
+
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ccc;
+  transition: .4s;
+  border-radius: 34px;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 14px;
+  width: 14px;
+  left: 3px;
+  bottom: 3px;
+  background-color: white;
+  transition: .4s;
+  border-radius: 50%;
+}
+
+input:checked + .slider {
+  background-color: #2196F3;
+}
+
+input:checked + .slider:before {
+  transform: translateX(14px);
+}
+
+/* Formularios */
+/* Estilos para la lista de formularios */
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  margin: -15px;
+}
+
+.col-md-4 {
+  flex: 0 0 33.333%;
+  max-width: 33.333%;
+  padding: 15px;
+  box-sizing: border-box;
+}
+
+.card {
+  background: white;
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  height: 100%;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  border-left: 5px solid;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.15);
+}
+
+.card-body {
+  padding: 20px;
+}
+
+.card-title {
+  font-size: 18px;
+  font-weight: 600;
+  margin-bottom: 15px;
+  color: #333;
+}
+
+/* Estados del formulario */
+.text-success {
+  color: #28a745;
+  font-size: 14px;
+  margin-bottom: 15px;
+  display: block;
+}
+
+.text-muted {
+  color: #6c757d;
+  font-size: 14px;
+  margin-bottom: 15px;
+  display: block;
+}
+
+/* Botones */
+.btn {
+  display: inline-block;
+  padding: 8px 16px;
+  border-radius: 4px;
+  text-decoration: none;
+  font-size: 14px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.btn-primary {
+  background-color: #007bff;
+  color: white;
+  border: none;
+}
+
+.btn-primary:hover {
+  background-color: #0069d9;
+}
+
+.btn-outline-primary {
+  background-color: transparent;
+  color: #007bff;
+  border: 1px solid #007bff;
+}
+
+.btn-outline-primary:hover {
+  background-color: #007bff;
+  color: white;
+}
+
+.btn-danger {
+  background-color: #dc3545;
+  color: white;
+  border: none;
+  margin-left: 8px;
+}
+
+.btn-danger:hover {
+  background-color: #c82333;
+}
+
+.btn-secondary {
+  background-color: #6c757d;
+  color: white;
+  border: none;
+}
+
+.btn-secondary:hover {
+  background-color: #5a6268;
+}
+
+/* Estilos para la página de edición */
+.edit-container {
+  max-width: 800px;
+}
+
+.edit-header {
+  margin-bottom: 30px;
+}
+
+.form-control {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ced4da;
+  border-radius: 4px;
+  font-size: 14px;
+  margin-bottom: 15px;
+  font-family: 'Courier New', monospace;
+  min-height: 400px;
+}
+
+.form-text {
+  color: #6c757d;
+  font-size: 13px;
+  display: block;
+  margin-top: -10px;
+  margin-bottom: 20px;
+}
+
+.d-flex {
+  display: flex;
+}
+
+.justify-content-between {
+  justify-content: space-between;
+}
+
+/* Responsive */
+@media (max-width: 992px) {
+  .col-md-4 {
+      flex: 0 0 50%;
+      max-width: 50%;
+  }
+}
+
+@media (max-width: 768px) {
+  .col-md-4 {
+      flex: 0 0 100%;
+      max-width: 100%;
+  }
+  
+  .btn-danger {
+      margin-left: 0;
+      margin-top: 8px;
+  }
+  
+  .d-flex {
+      flex-direction: column;
+  }
+  
+  .btn {
+      width: 100%;
+      margin-bottom: 10px;
+      text-align: center;
+  }
+}
+/* Fin Formularios */
+
+.tachado-punteado {
+  position: relative;
+  display: block;
+}
+
+.tachado-punteado::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 50%;
+  border-top: 1px dotted black;
+  transform: translateY(-50%);
+}

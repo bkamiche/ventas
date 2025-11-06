@@ -1,0 +1,115 @@
+{% extends 'base_sinmenu.html' %}
+{% block title %}{{ _("Qué hacemos - StudioSync CRM") }}{% endblock %}
+{% block content %}
+<div class="what-container">
+    <header class="what-header">
+        <img src="{{ url_for('static', path=logo) }}" alt="CRM" class="what-logo">
+        <h1>{{ _("Qué hacemos") }}</h1>
+    </header>
+
+    <main class="what-content">
+        <div class="what-section">
+            <h2><i class="fas fa-box-open what-icon"></i> {{ _("Gestión de Paquetes Fotográficos") }}</h2>
+            <p>{{ _("En StudioSync CRM te ayudamos a organizar todos tus paquetes de servicios de manera clara y eficiente. Puedes crear diferentes categorías, como sesiones New Born, Baby, Sitter, Smash Cake o eventos familiares, y definir de forma precisa los precios, la duración y las características incluidas en cada uno.") }}</p>
+            <p>{{ _("De esta manera, siempre tendrás una visión estructurada de tu portafolio, lo que facilita la comunicación con tus clientes y la estandarización de la calidad del servicio.") }}</p>
+        </div>
+
+
+        <div class="what-cta">
+            <h3>{{ _("¿Quieres conocer más sobre cómo CRM puede transformar tu empresa?") }}</h3>
+            <p>{{ _("Estaremos encantados de contarte todos los detalles y mostrarte cómo nuestra plataforma puede adaptarse a las necesidades de tu negocio.") }}</p>
+            <a href="mailto:?subject=Consulta%20desde%20la%20web" class="cta-link">
+                <i class="fas fa-envelope"></i> correo@correo.com
+            </a>
+        </div>
+    </main>
+
+    <footer class="what-footer">
+        <p>&copy; {{ _("2025 CRM. Todos los derechos reservados.") }}</p>
+        <div class="footer-links">
+            <a href="{{ url_for('tos') }}">{{ _("Términos de Servicio") }}</a>
+            <a href="{{ url_for('privacy') }}">{{ _("Política de Privacidad") }}</a>
+        </div>
+    </footer>
+</div>
+
+<style>
+    .what-container {
+        max-width: 1000px;
+        margin: 0 auto;
+        padding: 2rem;
+        font-family: 'Poppins', sans-serif;
+        color: #333;
+    }
+    .what-header {
+        text-align: center;
+        margin-bottom: 3rem;
+    }
+    .what-logo {
+        width: 220px;
+        margin-bottom: 1rem;
+    }
+    .what-header h1 {
+        font-size: 2.5rem;
+        color: #6a11cb;
+        margin-bottom: 1rem;
+    }
+    .what-section {
+        background: white;
+        border-radius: 8px;
+        padding: 1.5rem;
+        margin-bottom: 1.5rem;
+        box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+    }
+    .what-section h2 {
+        color: #2575fc;
+        font-size: 1.3rem;
+        margin-bottom: 1rem;
+        display: flex;
+        align-items: center;
+    }
+    .what-icon {
+        margin-right: 10px;
+        color: #6a11cb;
+    }
+    .what-cta {
+        text-align: center;
+        margin: 3rem 0;
+        padding: 2rem;
+        background: #f8f9fa;
+        border-radius: 8px;
+    }
+    .cta-link {
+        display: inline-block;
+        margin-top: 1rem;
+        padding: 0.8rem 1.5rem;
+        background: #6a11cb;
+        color: #fff;
+        border-radius: 5px;
+        text-decoration: none;
+        font-weight: 600;
+    }
+    .what-footer {
+        text-align: center;
+        margin-top: 3rem;
+        padding-top: 2rem;
+        border-top: 1px solid #eee;
+    }
+    .footer-links {
+        margin-top: 1rem;
+    }
+    .footer-links a {
+        margin: 0 1rem;
+        color: #6a11cb;
+        text-decoration: none;
+    }
+    @media (max-width: 768px) {
+        .what-container {
+            padding: 1rem;
+        }
+        .what-header h1 {
+            font-size: 2rem;
+        }
+    }
+</style>
+{% endblock %}

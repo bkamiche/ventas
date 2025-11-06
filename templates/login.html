@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="referrer" content="no-referrer-when-downgrade">
+    <title>{{ _("CRM - Iniciar Sesión") }}</title>
+    <link rel="stylesheet" href="{{ url_path(request, 'static', path='style.css') }}">
+    <link rel="shortcut icon" href="{{ url_path(request, 'static', path='favicon.ico') }}">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/js-sha256/0.9.0/sha256.min.js"></script>
+    <!--<script src="https://code.jquery.com/jquery-2.2.4.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>-->
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+    <link href="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css" rel="stylesheet" />
+    <script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/flag-icon-css/7.2.3/css/flag-icons.min.css" rel="stylesheet">
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Poppins', sans-serif;
+            background: linear-gradient(135deg, #6a11cb, #2575fc);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            color: #fff;
+        }
+        .container {
+            background: rgba(255, 255, 255, 0.1);
+            padding: 40px;
+            border-radius: 10px;
+            box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+            backdrop-filter: blur(10px);
+            width: 300px;
+            text-align: center;
+        }
+        .container h1 {
+            margin-bottom: 20px;
+            font-size: 24px;
+        }
+        .container h2 {
+            margin-bottom: 30px;
+            font-size: 18px;
+            font-weight: 400;
+            color: #ddd;
+        }
+        .container label {
+            display: block;
+            margin-bottom: 5px;
+            font-size: 14px;
+            color: #fff;
+        }
+        .container input {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 20px;
+            border: none;
+            border-radius: 5px;
+            background: rgba(255, 255, 255, 0.2);
+            color: #fff;
+            font-size: 14px;
+        }
+        .container input::placeholder {
+            color: #ddd;
+        }
+        .container button {
+            width: 100%;
+            padding: 10px;
+            border: none;
+            border-radius: 5px;
+            background: #2575fc;
+            color: #fff;
+            font-size: 16px;
+            cursor: pointer;
+            transition: background 0.3s ease;
+        }
+        .container button:hover {
+            background: #6a11cb;
+        }
+        .container .input-icon {
+            position: relative;
+        }
+        .container .input-icon i {
+            position: absolute;
+            left: 10px;
+            top: 10px;
+            color: #fff;
+        }
+        .container .input-icon input {
+            padding-left: 40px;
+        }
+        .container img {
+            width:220px;
+        }
+        .container img:hover {
+            opacity: 1 !important;
+        }
+        .select2-results__option {
+            color: #333333; /* Color del texto */
+            background-color: #ffffff; /* Color de fondo */
+        }
+
+        .select2-results__option--highlighted[aria-selected] {
+            color: #ffffff; /* Color del texto en hover/selección */
+            background-color: #007bff; /* Color de fondo en hover/selección */
+        }
+    </style>
+    <script>
+        function hashPassword(password) {
+            return sha256(password); // Hashea la contraseña
+        }
+        window.onload = function() {
+            document.querySelector('form').addEventListener('submit', function(event) {
+                event.preventDefault();
+                const passwordInput = document.querySelector('input[name="contrasena"]');
+                const hashedPassword = hashPassword(passwordInput.value);
+                passwordInput.value = hashedPassword;
+                this.submit();
+            });
+        }
+    </script>
+</head>
+<body>
+    {% with messages = get_flashed_messages(request, with_categories=true) %}
+        {% if messages %}
+            <div id="flash-messages">
+                {% for category, message in messages %}
+                    <div class="alert alert-{{ category }}">{{ message }}</div>
+                {% endfor %}
+            </div>
+        {% endif %}
+    {% endwith %}
+    <div class="container">
+        <img src="{{ url_for('static', path=logo) }}" alt="LOGO">
+        <h1>CRM</h1>
+        <form method="POST">
+            <div class="input-icon">
+                <i class="fas fa-user"></i>
+                <input type="text" name="usuario" placeholder="{{ _("Usuario") }}" required>
+            </div>
+            <div class="input-icon">
+                <i class="fas fa-lock"></i>
+                <input type="password" name="contrasena" placeholder="{{ _("Contraseña") }}" required>
+            </div>
+            <button type="submit">{{ _("Iniciar Sesión") }}</button>
+        </form>
+        <br>
+        <select id="language-selector" onchange="window.location.href='/set_language/' + this.value">
+            <option data-flag="fi-es" value="es" {% if current_language == 'es' %}selected{% endif %}>Español</option>
+            <option data-flag="fi-us" value="en" {% if current_language == 'en' %}selected{% endif %}>English</option>
+            <option data-flag="fi-br" value="pt" {% if current_language == 'pt' %}selected{% endif %}>Português</option>
+            <option data-flag="fi-fr" value="fr" {% if current_language == 'fr' %}selected{% endif %}>Français</option>
+            <option data-flag="fi-it" value="it" {% if current_language == 'it' %}selected{% endif %}>Italiano</option>
+            <option data-flag="fi-de" value="de" {% if current_language == 'de' %}selected{% endif %}>Deutsch</option>
+        </select>
+        <br>
+        <a class="recoverlink" href="{{ url_for('recuperar_password_form') }}">{{ _("Olvidé mi contraseña") }}</a>
+    </div>
+    <script>
+        $(document).ready(function() {
+            $('.alert').each(function(index) {
+                $(this).delay(200 * index).queue(function() {
+                    $(this).addClass('show').dequeue();
+                });
+            });
+
+            // Ocultar los mensajes después de 5 segundos
+            $('.alert').delay(5000).queue(function() {
+                $(this).fadeOut(500, function() {
+                    $(this).remove();
+                }).dequeue();
+            });
+            $('#language-selector').select2({
+                // Permitir plantillas personalizadas para resultados y selección
+                templateResult: formatLanguageOption,
+                templateSelection: formatLanguageOption,
+                minimumResultsForSearch: Infinity // Deshabilitar barra de búsqueda si no tienes muchas opciones
+            });
+            // Función para personalizar cada opción
+            function formatLanguageOption(option) {
+                if (!option.id) {
+                    return option.text; // Retornar solo texto si es un placeholder
+                }
+                // Obtener la clase de bandera desde el atributo data-flag
+                const flagClass = $(option.element).data('flag');
+                // Retornar HTML con la bandera y el nombre del idioma
+                const $option = $(
+                    `<span class="${flagClass} flag-icon mr-2"></span>` +
+                    `<span>${option.text}</span>`
+                );
+                return $option;
+            }
+        });
+    </script>
+</body>
+</html>

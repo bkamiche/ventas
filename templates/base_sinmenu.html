@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="shortcut icon" href="{{ url_path(request, 'static', path='favicon.ico') }}">
+    <title>{% block title %}{% endblock %}</title>
+    <link rel="stylesheet" href="{{ url_path(request, 'static', path='style.css') }}">
+    <!--<script src="https://code.jquery.com/jquery-2.2.4.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>-->
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+    <link href="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css" rel="stylesheet" />
+    <script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/flag-icon-css/7.2.3/css/flag-icons.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <!-- Meta descripción -->
+    <meta name="description" content="" />
+    <!-- Meta palabras clave (menos impacto, pero pueden ayudar para algunas búsquedas locales/específicas) -->
+    <meta name="keywords" content="" />
+    <!-- Canonical para evitar contenido duplicado -->
+    <link rel="canonical" href="" />
+    <!-- Meta viewport: imprescindible para móviles -->
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+    <!-- Robots: para controlar indexación -->
+    <meta name="robots" content="index, follow" />
+    <!-- Open Graph (para compartir en redes sociales) -->
+    <meta property="og:title" content="" />
+    <meta property="og:description" content="" />
+    <meta property="og:url" content="" />
+    <meta property="og:type" content="website" />
+    <meta property="og:image" content="" />
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="" />
+    <meta name="twitter:description" content="" />
+    <meta name="twitter:image" content="" />
+</head>
+<body>
+    <nav class="menu">
+        <ul>
+            <li class="logo">
+                <a href='/' style="padding:0px 0px;"><img src="{{ url_for('static', path=logo) }}" alt="LOGO"></a>
+            </li>
+            <li style="float:right">
+                <div style="margin-top:10px">
+                    <select id="language-selector" style="width:80px">
+                        <option value="en" data-flag="fi-us">EN</option>
+                        <option value="es" data-flag="fi-es">ES</option>
+                        <option value="pt" data-flag="fi-br">PT</option>
+                        <option value="fr" data-flag="fi-fr">FR</option>
+                        <option value="it" data-flag="fi-it">IT</option>
+                        <option value="de" data-flag="fi-de">DE</option>
+                    </select>                
+                </div>
+            </li>
+        </ul>
+    </nav>
+    {% with messages = get_flashed_messages(request, with_categories=true) %}
+        {% if messages %}
+            <div id="flash-messages">
+                {% for category, message in messages %}
+                    <div class="alert alert-{{ category }}">{{ message }}</div>
+                {% endfor %}
+            </div>
+        {% endif %}
+    {% endwith %}
+    <div class="container">
+        {% block content %}{% endblock %}
+    </div>
+    <script>
+        function getCookie(name) {
+            const value = `; ${document.cookie}`;
+            const parts = value.split(`; ${name}=`);
+            if (parts.length === 2) return parts.pop().split(';').shift();
+            return null; // Retorna null si no se encuentra la cookie
+        }
+        // In your Javascript (external .js resource or <script> tag)
+        $(document).ready(function() {
+            $('.alert').each(function(index) {
+                $(this).delay(200 * index).queue(function() {
+                    $(this).addClass('show').dequeue();
+                });
+            });
+            // Ocultar los mensajes después de 5 segundos
+            $('.alert').delay(5000).queue(function() {
+                $(this).fadeOut(500, function() {
+                    $(this).remove();
+                }).dequeue();
+            });
+
+            $('.select2').select2({
+                //templateResult: formatOption,
+                //templateSelection: formatOption, // Para que en la opción seleccionada también aparezca el estilo
+                //escapeMarkup: function(m) { return m; }
+            });
+            $('.select3').select2({
+                minimumResultsForSearch: Infinity // Deshabilitar barra de búsqueda si no tienes muchas opciones
+            });
+            const activeLanguage = getCookie('lang') || 'es';
+            $('#language-selector').val(activeLanguage).trigger('change');
+            $('#language-selector').select2({
+                // Permitir plantillas personalizadas para resultados y selección
+                templateResult: formatLanguageOption,
+                templateSelection: formatLanguageOption,
+                minimumResultsForSearch: Infinity // Deshabilitar barra de búsqueda si no tienes muchas opciones
+            });
+            // Función para personalizar cada opción
+            function formatLanguageOption(option) {
+                if (!option.id) {
+                    return option.text; // Retornar solo texto si es un placeholder
+                }
+                // Obtener la clase de bandera desde el atributo data-flag
+                const flagClass = $(option.element).data('flag');
+                // Retornar HTML con la bandera y el nombre del idioma
+                const $option = $(
+                    `<span class="${flagClass} flag-icon mr-2"></span>` +
+                    `<span>${option.text}</span>`
+                );
+                return $option;
+            }
+            $('#language-selector').on('change', function() {
+                const selectedLanguage = $(this).val();
+                // Cambiar idioma con Ajax (a través de Flask)
+                $.post('/set_language/'+selectedLanguage, {  }, function() {
+                    location.reload(); // Recarga la página para aplicar el nuevo idioma
+                });
+            });
+            function formatOption(option) {
+                if (!option.id) {
+                    return option.text;
+                }
+                // Obtener el color definido en data-color
+                const color = $(option.element).data('color');
+                //console.log(color);
+                if(color) {
+                    const $option = $(`<span style="display:block;background-color:${color}" class="option-color">${option.text}</span>`);
+                    return $option;
+                } else {
+                    return option.text;
+                }
+            }
+        });
+    </script>
+</body>
+</html>

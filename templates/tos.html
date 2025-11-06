@@ -1,0 +1,203 @@
+{% extends 'base_sinmenu.html' %}
+{% block title %}{{ _("Términos de Servicio - CRM") }}{% endblock %}
+{% block content %}
+<div class="tos-container">
+    <header class="tos-header">
+        <img src="{{ url_for('static', path=logo) }}" alt="CRM" class="tos-logo">
+        <h1>{{ _("Términos de Servicio") }}</h1>
+        <p class="tos-subtitle">{{ _("Última actualización: ") }}<span id="current-date"></span></p>
+    </header>
+    
+    <main class="tos-content">
+        <div class="tos-section">
+            <h2><i class="fas fa-check-circle tos-icon"></i> {{ _("1. Aceptación de los Términos") }}</h2>
+            <div class="tos-details">
+                <p>{{ _("Al acceder y utilizar CRM, usted acepta cumplir con estos términos y condiciones. Si no está de acuerdo con alguna parte de estos términos, no podrá utilizar nuestro servicio.") }}</p>
+            </div>
+        </div>
+        
+        <div class="tos-section">
+            <h2><i class="fas fa-laptop-code tos-icon"></i> {{ _("2. Uso del Servicio") }}</h2>
+            <div class="tos-details">
+                <p>{{ _("Usted acepta utilizar CRM únicamente para fines legales y de acuerdo con estos términos. No está permitido el uso indebido del servicio, incluyendo pero no limitado a:") }}</p>
+                <ul class="tos-list">
+                    <li><i class="fas fa-ban"></i> {{ _("Violar leyes o regulaciones aplicables.") }}</li>
+                    <li><i class="fas fa-ban"></i> {{ _("Infringir los derechos de propiedad intelectual de terceros.") }}</li>
+                    <li><i class="fas fa-ban"></i> {{ _("Distribuir contenido malicioso o dañino.") }}</li>
+                    <li><i class="fas fa-ban"></i> {{ _("Intentar acceder a cuentas de otros usuarios sin autorización.") }}</li>
+                </ul>
+            </div>
+        </div>
+        
+        <div class="tos-section">
+            <h2><i class="fas fa-sync-alt tos-icon"></i> {{ _("3. Modificaciones") }}</h2>
+            <div class="tos-details">
+                <p>{{ _("Nos reservamos el derecho de modificar estos términos en cualquier momento. Las versiones actualizadas serán publicadas en esta página con la fecha de última actualización.") }}</p>
+                <p>{{ _("El uso continuado del servicio después de dichos cambios constituirá su consentimiento a los términos modificados.") }}</p>
+            </div>
+        </div>
+        
+        <div class="tos-section">
+            <h2><i class="fas fa-exclamation-triangle tos-icon"></i> {{ _("4. Limitación de Responsabilidad") }}</h2>
+            <div class="tos-details">
+                <p>{{ _("CRM se proporciona 'tal cual' y 'según disponibilidad'. En la medida permitida por la ley, no seremos responsables por:") }}</p>
+                <ul class="tos-list">
+                    <li><i class="fas fa-times"></i> {{ _("Daños indirectos, incidentales o consecuentes.") }}</li>
+                    <li><i class="fas fa-times"></i> {{ _("Pérdida de datos o interrupciones del servicio.") }}</li>
+                    <li><i class="fas fa-times"></i> {{ _("Cualquier daño resultante del uso o imposibilidad de uso del servicio.") }}</li>
+                </ul>
+            </div>
+        </div>
+        
+        <div class="tos-section">
+            <h2><i class="fas fa-id-card tos-icon"></i> {{ _("5. Cuentas de Usuario") }}</h2>
+            <div class="tos-details">
+                <p>{{ _("Usted es responsable de mantener la confidencialidad de su cuenta y contraseña. Todas las actividades que ocurran bajo su cuenta son su responsabilidad.") }}</p>
+                <p>{{ _("Debe notificarnos inmediatamente cualquier uso no autorizado de su cuenta o cualquier otra violación de seguridad.") }}</p>
+            </div>
+        </div>
+        
+        <div class="tos-section">
+            <h2><i class="fas fa-envelope tos-icon"></i> {{ _("6. Contacto") }}</h2>
+            <div class="tos-details">
+                <p>{{ _("Para preguntas sobre estos términos, contáctenos en:") }}</p>
+                <a href="mailto:" class="contact-link">
+                    <i class="fas fa-envelope"></i> correo@correo.com
+                </a>
+            </div>
+        </div>
+    </main>
+    
+    <footer class="tos-footer">
+        <p>&copy; {{ _("2025 CRM. Todos los derechos reservados.") }}</p>
+        <div class="footer-links">
+            <a href="{{ url_for('tos') }}">{{ _("Términos de Servicio") }}</a>
+            <a href="{{ url_for('privacy') }}">{{ _("Política de Privacidad") }}</a>
+        </div>
+    </footer>
+</div>
+
+<style>
+    .tos-container {
+        max-width: 1000px;
+        margin: 0 auto;
+        padding: 2rem;
+        font-family: 'Poppins', sans-serif;
+        color: #333;
+    }
+    
+    .tos-header {
+        text-align: center;
+        margin-bottom: 3rem;
+    }
+    
+    .tos-logo {
+        width: 220px;
+        margin-bottom: 1rem;
+    }
+    
+    .tos-header h1 {
+        font-size: 2.5rem;
+        color: #6a11cb;
+        margin-bottom: 0.5rem;
+    }
+    
+    .tos-subtitle {
+        color: #666;
+        font-size: 0.9rem;
+    }
+    
+    .tos-section {
+        background: white;
+        border-radius: 8px;
+        padding: 1.5rem;
+        margin-bottom: 1.5rem;
+        box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+    }
+    
+    .tos-section h2 {
+        color: #2575fc;
+        font-size: 1.3rem;
+        margin-bottom: 1rem;
+        display: flex;
+        align-items: center;
+    }
+    
+    .tos-icon {
+        margin-right: 10px;
+        color: #6a11cb;
+    }
+    
+    .tos-details {
+        padding-left: 2rem;
+    }
+    
+    .tos-details p {
+        margin-bottom: 0.8rem;
+    }
+    
+    .tos-list {
+        list-style: none;
+        padding-left: 0;
+    }
+    
+    .tos-list li {
+        margin-bottom: 0.5rem;
+        display: flex;
+        align-items: flex-start;
+    }
+    
+    .tos-list i {
+        margin-right: 10px;
+        color: #dc3545;
+    }
+    
+    .contact-link {
+        display: inline-block;
+        margin-top: 0.5rem;
+        color: #2575fc;
+        text-decoration: none;
+        font-weight: 600;
+    }
+    
+    .tos-footer {
+        text-align: center;
+        margin-top: 3rem;
+        padding-top: 2rem;
+        border-top: 1px solid #eee;
+    }
+    
+    .footer-links {
+        margin-top: 1rem;
+    }
+    
+    .footer-links a {
+        margin: 0 1rem;
+        color: #6a11cb;
+        text-decoration: none;
+    }
+    
+    @media (max-width: 768px) {
+        .tos-container {
+            padding: 1rem;
+        }
+        
+        .tos-header h1 {
+            font-size: 2rem;
+        }
+        
+        .tos-details {
+            padding-left: 1rem;
+        }
+    }
+</style>
+
+<script>
+    // Mostrar la fecha actual
+    document.getElementById('current-date').textContent = new Date().toLocaleDateString('es-ES', {
+        year: 'numeric', 
+        month: 'long', 
+        day: 'numeric'
+    });
+</script>
+{% endblock %}
